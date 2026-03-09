@@ -1,0 +1,72 @@
+import React, { useEffect, useState } from "react";
+
+const Hero: React.FC = () => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setVisible(true), 100);
+  }, []);
+
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section
+      id="hero"
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: "0 2rem",
+        maxWidth: "900px",
+        margin: "0 auto",
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(20px)",
+        transition: "all 0.8s ease",
+      }}
+    >
+      <p style={{ color: "#6366f1", fontSize: "0.95rem", letterSpacing: "0.15em", marginBottom: "1rem", fontWeight: 500 }}>
+        HI, I'M
+      </p>
+      <h1 style={{ fontSize: "clamp(2.5rem, 8vw, 5rem)", fontWeight: 800, color: "#ffffff", lineHeight: 1.1, margin: "0 0 1rem 0" }}>
+        Adebayo
+      </h1>
+      <h2 style={{ fontSize: "clamp(1.2rem, 4vw, 2.2rem)", fontWeight: 400, color: "#6b7280", margin: "0 0 1.5rem 0" }}>
+        Frontend Developer
+      </h2>
+      <p style={{ fontSize: "1.05rem", color: "#737373", maxWidth: "520px", lineHeight: 1.8, marginBottom: "2.5rem" }}>
+        I build clean, fast and modern web experiences using HTML, CSS, JavaScript, React and Node.js.
+      </p>
+      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+        <button
+          onClick={() => scrollTo("projects")}
+          style={{
+            padding: "0.8rem 2rem", background: "#6366f1", color: "#fff",
+            border: "none", borderRadius: "6px", cursor: "pointer",
+            fontSize: "0.95rem", fontWeight: 600, transition: "background 0.2s",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.background = "#4f46e5")}
+          onMouseLeave={(e) => (e.currentTarget.style.background = "#6366f1")}
+        >
+          View My Work
+        </button>
+        <button
+          onClick={() => scrollTo("contact")}
+          style={{
+            padding: "0.8rem 2rem", background: "transparent", color: "#e5e5e5",
+            border: "1px solid #333", borderRadius: "6px", cursor: "pointer",
+            fontSize: "0.95rem", fontWeight: 600, transition: "border-color 0.2s",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#6366f1")}
+          onMouseLeave={(e) => (e.currentTarget.style.borderColor = "#333")}
+        >
+          Contact Me
+        </button>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
