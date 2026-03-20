@@ -19,10 +19,10 @@ const Hero: React.FC = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        padding: "0 1rem", // 🔥 reduced padding
-        maxWidth: "100%", // 🔥 remove hard cap
+        padding: "0 1rem",
+        maxWidth: "100%",
         margin: "0 auto",
-        overflow: "hidden", // 🔥 prevent child overflow
+        overflow: "hidden",
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(20px)",
         transition: "all 0.8s ease",
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
 
         <h1
           style={{
-            fontSize: "clamp(2.2rem, 8vw, 4.5rem)", // 🔥 slightly safer max
+            fontSize: "clamp(2.2rem, 8vw, 4.5rem)",
             fontWeight: 800,
             color: "#ffffff",
             lineHeight: 1.1,
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
             color: "#6b7280",
             margin: "0 0 1.5rem 0",
             lineHeight: 1.5,
-            overflowWrap: "anywhere", // 🔥 CRITICAL
+            overflowWrap: "anywhere",
           }}
         >
           Frontend Developer • React • TypeScript
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
             maxWidth: "520px",
             lineHeight: 1.8,
             marginBottom: "2.5rem",
-            overflowWrap: "anywhere", // 🔥 prevents push
+            overflowWrap: "anywhere",
           }}
         >
           I build scalable web applications and AI-powered products, combining clean frontend architecture with real backend systems and API integrations.
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
           style={{
             display: "flex",
             gap: "1rem",
-            flexWrap: "wrap", // ✅ already good
+            flexWrap: "wrap",
           }}
         >
           <button
@@ -117,6 +117,23 @@ const Hero: React.FC = () => {
           >
             Contact Me
           </button>
+
+          <a
+  href="/Adebayo-CV.pdf"
+  download="Adebayo-Olayiwola-Frontend-Developer-CV.pdf"
+  style={{
+    padding: "0.8rem 2rem",
+    background: "#111",
+    color: "#fff",
+    border: "1px solid #333",
+    borderRadius: "6px",
+    textDecoration: "none",
+    fontSize: "0.95rem",
+    fontWeight: 600,
+  }}
+>
+  Download CV
+</a>
         </div>
       </div>
     </section>

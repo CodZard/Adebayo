@@ -99,32 +99,30 @@ const Navbar: React.FC<NavbarProps> = ({ scrollY }) => {
           ))}
         </ul>
 
+
         <a
-          href="#projects"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection("projects");
-          }}
-          className="desktop-nav"
-          style={{
-            textDecoration: "none",
-            padding: "0.7rem 1rem",
-            borderRadius: "999px",
-            background: "#6366f1",
-            color: "#fff",
-            fontSize: "0.88rem",
-            fontWeight: 600,
-            transition: "opacity 0.2s ease",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.opacity = "0.9";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.opacity = "1";
-          }}
-        >
-          View Projects
-        </a>
+  href="/Adebayo-CV.pdf"
+  download="Adebayo-Olayiwola-Frontend-Developer-CV.pdf"
+  className="desktop-nav"
+  style={{
+    textDecoration: "none",
+    padding: "0.7rem 1rem",
+    borderRadius: "999px",
+    background: "#6366f1",
+    color: "#fff",
+    fontSize: "0.88rem",
+    fontWeight: 600,
+    transition: "opacity 0.2s ease",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.opacity = "0.9";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.opacity = "1";
+  }}
+>
+  Resume
+</a>
 
         <button
           className="hamburger"
@@ -177,6 +175,18 @@ const Navbar: React.FC<NavbarProps> = ({ scrollY }) => {
               {link.label}
             </button>
           ))}
+
+          <a
+            href="/Adebayo-CV.pdf"
+            download="Adebayo-Olayiwola-Frontend-Developer-CV.pdf"
+            style={{
+              color: "#d4d4d4",
+              textDecoration: "none",
+              fontSize: "1rem",
+            }}
+          >
+            Resume
+          </a>
 
           <button
             onClick={() => scrollToSection("projects")}

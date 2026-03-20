@@ -20,8 +20,7 @@ const projects: Project[] = [
   },
   {
     title: "Volt Store",
-    description:
-      "An AI-powered luxury e-commerce platform featuring product browsing, shopping flow, and a stylist assistant that recommends outfits based on user prompts using Groq API.",
+    description: "AI-powered fashion assistant that generates complete outfit recommendations using real-time product data. Includes authentication, dynamic database queries, and a custom AI backend.",
     tech: ["React", "TypeScript", "Node.js", "Express.js", "Supabase", "Groq API"],
     link: "https://voltst-ore.netlify.app/",
     github: "https://github.com/CodZard/volt-store",
